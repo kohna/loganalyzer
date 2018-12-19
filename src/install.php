@@ -141,12 +141,12 @@ if ( $content['INSTALL_STEP'] == 2 )
 			if ( $iswriteable ) 
 			{
 				$content['fileperm'][$i]['BGCOLOR'] = "#007700";
-				$content['fileperm'][$i]['ISSUCCESS'] = "Writeable"; 
+				$content['fileperm'][$i]['ISSUCCESS'] = "可写";
 			}
 			else
 			{
 				$content['fileperm'][$i]['BGCOLOR'] = "#770000";
-				$content['fileperm'][$i]['ISSUCCESS'] = "NOT Writeable"; 
+				$content['fileperm'][$i]['ISSUCCESS'] = "不可写";
 				$bSuccess = false;
 			}
 		}
@@ -163,19 +163,19 @@ if ( $content['INSTALL_STEP'] == 2 )
 				if ( is_writable($content['fileperm'][$i]['FILE_NAME']) ) 
 				{
 					$content['fileperm'][$i]['BGCOLOR'] = "#007700";
-					$content['fileperm'][$i]['ISSUCCESS'] = "Writeable"; 
+					$content['fileperm'][$i]['ISSUCCESS'] = "可写";
 				}
 				else
 				{
 					$content['fileperm'][$i]['BGCOLOR'] = "#770000";
-					$content['fileperm'][$i]['ISSUCCESS'] = "NOT Writeable"; 
+					$content['fileperm'][$i]['ISSUCCESS'] = "不可写";
 					$bSuccess = false;
 				}
 			}
 			else
 			{
 				$content['fileperm'][$i]['BGCOLOR'] = "#770000";
-				$content['fileperm'][$i]['ISSUCCESS'] = "File does NOT exist!"; 
+				$content['fileperm'][$i]['ISSUCCESS'] = "文件不存在";
 				$bSuccess = false;
 			}
 		}
@@ -468,7 +468,7 @@ else if ( $content['INSTALL_STEP'] == 5 )
 		// Init $totaldbdefs
 		$totaldbdefs = "";
 
-		// Read the table GLOBAL definitions 
+		// Read the table GLOBAL definitions
 		ImportDataFile( $content['BASEPATH'] . "include/db_template.txt" );
 
 		// Process definitions ^^
@@ -484,8 +484,10 @@ else if ( $content['INSTALL_STEP'] == 5 )
 		
 		// Now split by sql command
 //		$mycommands = split( ";\n", $totaldbdefs ); DEPRECEATED CALL!
-		$mycommands = preg_split('/;\n/', $totaldbdefs, -1, PREG_SPLIT_NO_EMPTY);
-		
+        // 注释 ,这里在7.0上发生错误
+       // $mycommands = preg_split('/;\n/', $totaldbdefs, -1, PREG_SPLIT_NO_EMPTY);
+		$mycommands = preg_split('/;/', $totaldbdefs, -1, PREG_SPLIT_NO_EMPTY);
+
 //		// check for different linefeed
 //		if ( count($mycommands) <= 1 )
 //			$mycommands = split( ";\n", $totaldbdefs );
