@@ -1,4 +1,7 @@
 ---------------------------------------------------------------------------
+版本 4.1.7 (稳定版), 2019-04-08
+- 添加了部分中文翻译
+---------------------------------------------------------------------------
 Version 4.1.7 (stable), xxxx-xx-xx
 - Fixed mysql calls and php7 compatibility issues in convert.php
 - Login template: Fixed length limit of username / password

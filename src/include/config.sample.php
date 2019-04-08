@@ -92,7 +92,7 @@ $CFG['ViewDefaultTheme'] = "default";		// This sets the default theme the user i
 $CFG['ViewDefaultLanguage'] = "en";			// Sets the default display language
 $CFG['ViewEnableAutoReloadSeconds'] = 0;	// If "ViewEnableAutoReloadSeconds" is set to anything higher the 0 (which means disabled), this means auto reload is enabled by default. 
 
-$CFG['SearchCustomButtonCaption'] = "I'd like to feel sad";	// Default caption for the custom fast search button
+$CFG['SearchCustomButtonCaption'] = "不想看到那么多错误";	// Default caption for the custom fast search button
 $CFG['SearchCustomButtonSearch'] = "error";					// Default search string for the custom search button
 
 $CFG['EnableContextLinks'] = 1;				// if enabled, context links within the messages will automatically be created and added. Set this to 0 to disable all context links. 

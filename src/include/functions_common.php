@@ -61,8 +61,9 @@ $DEBUGMODE = DEBUG_INFO;
 // --- 
 
 // Default language
-$LANG_EN = "en";	// Used for fallback
-$LANG = "en";		// Default language
+// 默认中文
+$LANG_EN = "cn";	// Used for fallback
+$LANG = "cn";		// Default language
 
 // Default Template vars
 $content['BUILDNUMBER'] = "4.1.6";
@@ -129,7 +130,7 @@ function CheckForInstallPhp()
 	// Check for installscript!
 	if ( file_exists($content['BASEPATH'] . "install.php") ) 
 		$strinstallmsg = '<br><br>' 
-						. '<center><b>Click <a href="' . $content['BASEPATH'] . 'install.php">here</a> to Install Adiscon LogAnalyzer!</b><br><br>'
+						. '<center><b>点击 <a href="' . $content['BASEPATH'] . 'install.php">这里</a> 来安装 Adiscon LogAnalyzer!</b><br><br>'
 //							. 'See the Installation Guides for more Details!<br>'
 //							. '<a href="docs/installation.htm" target="_blank">English Installation Guide</a>&nbsp;|&nbsp;'
 //							. '<a href="docs/installation_de.htm" target="_blank">German Installation Guide</a><br><br>' 
@@ -137,7 +138,7 @@ function CheckForInstallPhp()
 						. '</center>';
 	else
 		$strinstallmsg = "";
-	DieWithErrorMsg( 'Error, main configuration file is missing!' . $strinstallmsg );
+	DieWithErrorMsg( '错误, 主要配置文件丢失!' . $strinstallmsg );
 }
 
 function GetFileLength($szFileName)
@@ -841,7 +842,7 @@ function InitConfigurationValues()
 				}
 			}
 			else // Critical ERROR HERE!
-				DieWithFriendlyErrorMsg( "Critical Error occured while trying to access the database in table '" . DB_CONFIG . "'" );
+				DieWithFriendlyErrorMsg( "在访问以下数据库的表时发生致命错误: '" . DB_CONFIG . "'" );
 
 			// Database Version Checker! 
 			if ( $content['database_internalversion'] > $content['database_installedversion'] )
@@ -902,7 +903,7 @@ function InitConfigurationValues()
 		else
 		{
 			if ( defined('IS_ADMINPAGE') || defined("IS_NOLOGINPAGE") )	// Language System not initialized yet
-				DieWithFriendlyErrorMsg( "The LogAnalyzer user system is currently disabled or not installed." );
+				DieWithFriendlyErrorMsg( "用户系统当前已禁用或未安装" );
 		}
 	}
 
@@ -1084,7 +1085,7 @@ function DieWithErrorMsg( $szerrmsg )
 	global $RUNMODE, $content, $gl_root_path;
 	if		( $RUNMODE == RUNMODE_COMMANDLINE )
 	{
-		print("\n\n\tCritical Error occured\t-\tErrordetails:\n");
+		print("\n\n\t致命错误\t-\t错误详细:\n");
 		print("\t" . $szerrmsg . "\n\n");
 		print("\tTerminating now!\n");
 	}
@@ -1092,13 +1093,13 @@ function DieWithErrorMsg( $szerrmsg )
 	{
 		// Print main error!
 		print	( 
-			"<html><title>Adiscon LogAnalyzer :: Critical Error occured</title><head>" . 
+			"<html><title>Adiscon LogAnalyzer :: 致命错误</title><head>" .
 			"<link rel=\"stylesheet\" href=\"" . $gl_root_path . "themes/default/main.css\" type=\"text/css\"></head><body><br><br>" .
 			"<table width=\"600\" align=\"center\" class=\"with_border_alternate ErrorMsg\" cellpadding=\"2\"><tr>". 
 			"<td class=\"PriorityError\" align=\"center\" colspan=\"2\">" . 
-			"<H3>Critical Error occured</H3>" . 
+			"<H3>致命错误</H3>" .
 			"</td></tr>" . 
-			"<tr><td class=\"cellmenu1_naked\" align=\"left\">Errordetails:</td>" . 
+			"<tr><td class=\"cellmenu1_naked\" align=\"left\">错误详细:</td>" .
 			"<td class=\"tableBackground\" align=\"left\"><br>" . 
 			$szerrmsg . 
 			"<br><br></td></tr></table>");
@@ -1242,7 +1243,8 @@ function IncludeLanguageFile( $langfile, $failOnError = true )
 	global $LANG, $LANG_EN; 
 
 	// If english is not selected, we load ENGLISH first - then overwrite with configured language
-	if ( $LANG != "en" ) 
+    // 强制中文
+	if ( $LANG != "cn" )
 		$langengfile = str_replace( $LANG, $LANG_EN, $langfile );
 	else
 		$langengfile = $langfile;
