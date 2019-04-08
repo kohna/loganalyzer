@@ -10,7 +10,7 @@
 	<li><a href="http://wiki.rsyslog.com/index.php/PhpLogCon_FAQ" target="phplogcon_help"><img align="left" src="{MENU_BULLET_YELLOW}" width="16" height="16" vspace="0" title="{LN_MENU_WIKI}">&nbsp;{LN_MENU_WIKI}</a></li>
 	<li><a href="http://loganalyzer.adiscon.com/doc-professional_services.html" target="phplogcon_help"><img align="left" src="{MENU_BULLET_YELLOW}" width="16" height="16" vspace="0" title="{LN_MENU_PROSERVICES}">&nbsp;{LN_MENU_PROSERVICES}</a></li>
 </ul>
-<button id="button_menu_searchkb"><img align="left" src="{MENU_KB}" width="16" height="16" vspace="0" title="{LN_MENU_SEARCHINKB}">&nbsp;{LN_MENU_SEARCHINKB}</button>
+<!--<button id="button_menu_searchkb"><img align="left" src="{MENU_KB}" width="16" height="16" vspace="0" title="{LN_MENU_SEARCHINKB}">&nbsp;{LN_MENU_SEARCHINKB}</button>-->
 <!-- IF UserDBEnabled="true" -->
 	<!-- IF SESSION_LOGGEDIN!="true" -->
 	<button id="button_menu_login"><img align="left" src="{MENU_ADMINLOGOFF}" width="16" height="16" vspace="0" title="{LN_MENU_LOGIN}">&nbsp;{LN_MENU_LOGIN}</button><script>CreateLinkFunction( "#button_menu_login", "{BASEPATH}login.php"); </script>
@@ -34,5 +34,5 @@
 	CreateLinkFunction( "#button_menu_stats", "{BASEPATH}statistics.php"); 
 	CreateLinkFunction( "#button_menu_reports", "{BASEPATH}reports.php"); 
 	CreateMenuFunction( "#button_menu_help", "#menu_help", false );
-	CreateLinkFunction( "#button_menu_searchkb", "http://kb.monitorware.com/search.php"); 
+//	CreateLinkFunction( "#button_menu_searchkb", "http://kb.monitorware.com/search.php");
 </script>

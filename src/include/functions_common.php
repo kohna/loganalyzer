@@ -903,7 +903,7 @@ function InitConfigurationValues()
 		else
 		{
 			if ( defined('IS_ADMINPAGE') || defined("IS_NOLOGINPAGE") )	// Language System not initialized yet
-				DieWithFriendlyErrorMsg( "The LogAnalyzer user system is currently disabled or not installed." );
+				DieWithFriendlyErrorMsg( "用户系统当前已禁用或未安装" );
 		}
 	}
 

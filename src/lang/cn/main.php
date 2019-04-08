@@ -203,15 +203,15 @@ $content['LN_CFG_LOGLINETYPE'] = "日志文件类型";
 $content['LN_CFG_SYSLOGFILE'] = "日志文件";
 $content['LN_CFG_DATABASETYPEOPTIONS'] = "Database Type Options";
 $content['LN_CFG_DBTABLETYPE'] = "数据表类型";
-$content['LN_CFG_DBSTORAGEENGINE'] = "Database Storage Engine";
-$content['LN_CFG_DBTABLENAME'] = "Database Tablename";
+$content['LN_CFG_DBSTORAGEENGINE'] = "数据存储引擎";
+$content['LN_CFG_DBTABLENAME'] = "数据表名";
 $content['LN_CFG_NAMEOFTHESOURCE'] = "来源的名字";
 $content['LN_CFG_FIRSTSYSLOGSOURCE'] = "第一个日志来源";
-$content['LN_CFG_DBROWCOUNTING'] = "Enable Row Counting";
+$content['LN_CFG_DBROWCOUNTING'] = "开启行数";
 $content['LN_CFG_VIEW'] = "选择视图";
-$content['LN_CFG_DBUSERLOGINREQUIRED'] = "Require user to be logged in";
+$content['LN_CFG_DBUSERLOGINREQUIRED'] = "要求用户登录";
 $content['LN_CFG_MSGPARSERS'] = "消息解析器 (逗号分隔)";
-$content['LN_CFG_NORMALIZEMSG'] = "Normalize Message within Parsers";
+$content['LN_CFG_NORMALIZEMSG'] = "规范化解析器中的消息";
 $content['LN_CFG_SKIPUNPARSEABLE'] = "Skip unparseable messages (Only works if msgparsers are configured!)";
 $content['LN_CFG_DBRECORDSPERQUERY'] = "Recordcount for database queries";
 $content['LN_CFG_LDAPServer'] = "LDAP Server Hostname/IP";
@@ -283,9 +283,9 @@ $content['LN_INSTALL_PROGRESS'] = "安装进度: ";
 $content['LN_INSTALL_FRONTEND'] = "前端选项";
 $content['LN_INSTALL_NUMOFSYSLOGS'] = "每页显示日志数量";
 $content['LN_INSTALL_MSGCHARLIMIT'] = "信息字符最大显示数";
-$content['LN_INSTALL_STRCHARLIMIT'] = "Character display limit for all string type fields";
-$content['LN_INSTALL_SHOWDETAILPOP'] = "Show message details popup";
-$content['LN_INSTALL_AUTORESOLVIP'] = "Automatically resolved IP Addresses (inline)";
+$content['LN_INSTALL_STRCHARLIMIT'] = "字段中显示的字符数";
+$content['LN_INSTALL_SHOWDETAILPOP'] = "信息详细信息弹出窗口";
+$content['LN_INSTALL_AUTORESOLVIP'] = "自动解析IP (在行中)";
 $content['LN_INSTALL_USERDBOPTIONS'] = "用户数据库选项";
 $content['LN_INSTALL_ENABLEUSERDB'] = "开启用户数据库";
 $content['LN_INSTALL_SUCCESSSTATEMENTS'] = "执行成功的语句:";
@@ -301,7 +301,7 @@ $content['LN_INSTALL_SUCCESSCREATED'] = "成功创建用户";
 $content['LN_INSTALL_RECHECK'] = "重新检查";
 $content['LN_INSTALL_FINISH'] = "完成!";
 $content['LN_INSTALL_LDAPCONNECTFAILED'] = "Failed to connect to your LDAP Server '%1'.";
-$content['LN_INSTALL_WARNINGMYSQL'] = "A MYSQL database Server is required for this feature. Other database engines are not supported for the User Database System. However for logsources, there is support for other database systems.";
+$content['LN_INSTALL_WARNINGMYSQL'] = "此功能需要 MYSQL 数据库服务器。用户数据库系统不支持其他数据库引擎。但是, 对于日志源, 有对其他数据库系统的支持";
 $content['LN_INSTALL_'] = "";
 
 // Converter Site
@@ -342,7 +342,7 @@ $content['LN_CONVERT_ERROR_SOURCEIMPORT'] = "Critical Error while importing the 
 	$content['LN_CHART_TYPE_CAKE'] = "Cake (Pie)";
 	$content['LN_CHART_TYPE_BARS_VERTICAL'] = "Bars vertical";
 	$content['LN_CHART_TYPE_BARS_HORIZONTAL'] = "Bars horizontal";
-	$content['LN_STATS_WARNINGDISPLAY'] = "Generating graphics on large data sources currently is very time consuming. This will be addressed in later versions. If processing takes too long, please simply cancel the request.";
+	$content['LN_STATS_WARNINGDISPLAY'] ="目前在超多数据的源上生成图形非常耗时。这将在更高版本中解决。如果处理时间过长, 请简单地取消请求";
 
 // asktheoracle site
 $content['LN_ORACLE_TITLE'] = "Asking the oracle for '%1'";
@@ -401,10 +401,7 @@ $content['LN_REPORTS_SAVEDREPORTS'] = "保存报告";
 $content['LN_REPORTS_ADMIN'] = "管理报告";
 $content['LN_REPORTMENU_LIST'] = "已装报告列表";
 $content['LN_REPORTMENU_ONLINELIST'] = "所有可用报告";
-$content['LN_REPORTS_INFORMATION'] = "This page shows a list of installed and available reports including saved report configurations.
-<br/>To run a report, click on the buttons right to the Saved Reports.
-<br/>Attention! Generating reports can be very time consuming depending on the size of your database.
-";
+$content['LN_REPORTS_INFORMATION'] = "要运行报表, 请单击 '已保存的报表' 右侧的按钮。注意！生成报表可能非常耗时, 具体取决于数据库的大小";
 $content['LN_REPORTS_CHECKLOGSTREAMSOURCE'] = "Verify Logstream optimization";
 $content['LN_REPORTS_RUNNOW'] = "运行和保存报告";
 $content['LN_REPORTS_ERROR_ERRORCHECKINGSOURCE'] = "Error while checking Savedreport Source: %1";
